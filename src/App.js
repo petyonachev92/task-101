@@ -1,19 +1,26 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="App">
-      <section class="hero">
-        <div class="hero-body">
-          <p class="title">A React Task</p>
-          <p class="subtitle">by Boom.dev</p>
-        </div>
-      </section>
-      <div class="container is-fullhd">
-        <div class="notification">
-          Edit the <code>./src</code> folder to add components.
-        </div>
-      </div>
+      <form>
+        <h1>Create An Account</h1>
+
+        <label>
+          Email:
+          <input name="email" type="email" required />
+        </label>
+
+        <label>
+          Password:
+          <input name="password" type="password" required />
+        </label>
+
+        <button>Sign Up!</button>
+      </form>
     </div>
   );
 }
